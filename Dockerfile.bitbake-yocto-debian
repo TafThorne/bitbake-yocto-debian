@@ -14,6 +14,7 @@ RUN apt-get update && apt-get -y install \
  gcc-multilib \
  git-core \
  iputils-ping \
+ locales \
  python \
  python3 \
  python3-pip \
@@ -23,4 +24,12 @@ RUN apt-get update && apt-get -y install \
  unzip \
  wget \
  xz-utils
+RUN sed -i -e 's/# en_GB.UTF-8 UTF-8/en_GB.UTF-8 UTF-8/' /etc/locale.gen \
+ && echo 'LANG="en_GB.UTF-8"'>/etc/default/locale \
+ && dpkg-reconfigure --frontend=noninteractive locales \
+ && update-locale LANG=en_GB.UTF-8
+
+ENV LANG en_GB.UTF-8
+ENV LANGUAGE en_GB.UTF-8
+ENV LC_ALL en_GB.UTF-8
 
