@@ -10,8 +10,9 @@ https://hub.docker.com/r/tafthorne/bitbake-yocto-debian/
 ### Getting The Image
 
 To pull the image:
-
- docker pull tafthorne/bitbake-yocto-debian
+```
+docker pull tafthorne/bitbake-yocto-debian
+```
 
 ### Intended Use
 
@@ -25,11 +26,17 @@ For example, if you are presently in the root of your Yocto work area (having
 already cloned the neccacary files as discussed in the Yocto Project
 Development Manual https://www.yoctoproject.org/docs/2.4.2/dev-manual/dev-manual.html#cloning-the-poky-repository)
 you would start a container:
- docker run -ti --volume=${PWD}:/shared  -w "/shared"s tafthorne/bitbake-yocto-debian
+```
+docker run -ti --volume=${PWD}:/shared  -w "/shared"s tafthorne/bitbake-yocto-debian
+```
 initialize the Build Environment within the running container:
- source oe-init-build-env
+```
+source oe-init-build-env
+```
 Build the Image:
- bitbake core-image-minimal
+```
+bitbake core-image-minimal
+```
 
 You will then find the image in your host's work area.
 
