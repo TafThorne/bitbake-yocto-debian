@@ -21,7 +21,9 @@ example commands to recreatea it and the output given at the time of the error.
 ### Your First Code Contribution
 
 Please ensure that you build a Docker Image to test your new Dockerfile:
- docker build -t tafthorne/bitbake-yocto-debian -f ./Dockerfile.bitbake-yocto-debian .
+```
+docker build -t tafthorne/bitbake-yocto-debian -f ./Dockerfile.bitbake-yocto-debian .
+```
 
 ### Pull Requests
 
