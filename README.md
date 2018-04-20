@@ -46,7 +46,7 @@ You will then find the image in your host's work area.
 
 BitBake is a make-like tool focused on generating distributions and packages
 for cross compiled Linux.  For more details please read:
-* http://cppcheck.sourceforge.net/
+* https://en.wikipedia.org/wiki/BitBake
 
 It is the main build tool for the Yocto Project.
 
